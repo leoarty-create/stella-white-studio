@@ -396,7 +396,7 @@ function Occasions() {
                 <p className="absolute inset-x-6 bottom-6 font-serif text-[28px] font-normal leading-tight tracking-[-0.015em]">
                   {o.label}
                 </p>
-                <span className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-ink/50 opacity-0 backdrop-blur transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+                <span className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-none bg-ink/50 opacity-0 backdrop-blur transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
                   <InstagramIcon className="h-5 w-5" />
                 </span>
               </a>
@@ -653,7 +653,7 @@ export default function Home() {
     <>
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-paper"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-none focus:bg-ink focus:px-4 focus:py-2 focus:text-paper"
       >
         Skip to content
       </a>

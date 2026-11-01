@@ -80,7 +80,7 @@ export default function Lightbox() {
 
   const p = GALLERY[index];
   const btn =
-    "inline-flex h-12 w-12 items-center justify-center rounded-full bg-paper/10 text-paper backdrop-blur transition-colors hover:bg-paper/20";
+    "inline-flex h-12 w-12 items-center justify-center rounded-none bg-paper/10 text-paper backdrop-blur transition-colors hover:bg-paper/20";
 
   return (
     <dialog ref={dialog} aria-label="Photos from the studio" onKeyDown={onKeyDown} className="lightbox on-dark text-paper">

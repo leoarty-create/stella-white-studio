@@ -23,7 +23,7 @@ export default function Cta({
       href={INSTAGRAM_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 py-3 text-[17px] font-semibold leading-6 tracking-[-0.01em] transition-colors duration-300 ${tones[tone]} ${className}`}
+      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-none px-6 py-3 text-[17px] font-semibold leading-6 tracking-[-0.01em] transition-colors duration-300 ${tones[tone]} ${className}`}
     >
       <InstagramIcon className="h-5 w-5 shrink-0" />
       {label}

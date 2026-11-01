@@ -68,7 +68,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               title="Message us on Instagram"
-              className="hidden min-h-8 items-center rounded-full bg-ink px-4 text-[13px] font-semibold tracking-[-0.005em] text-paper transition-colors hover:bg-black sm:inline-flex"
+              className="hidden min-h-8 items-center rounded-none bg-ink px-4 text-[13px] font-semibold tracking-[-0.005em] text-paper transition-colors hover:bg-black sm:inline-flex"
             >
               Enquire
               <span className="sr-only"> — message us on Instagram</span>
