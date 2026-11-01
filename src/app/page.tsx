@@ -67,7 +67,7 @@ function Hero() {
   return (
     <section id="top" className="bg-paper text-ink">
       <Container className="pb-12 pt-28 text-center lg:pb-16 lg:pt-32">
-        <Logo className="mx-auto h-28 sm:h-32 lg:h-36" />
+        <Logo className="mx-auto h-24 sm:h-28 lg:h-32" />
         <h1 className="t-display mx-auto mt-10 max-w-[16ch] lg:mt-12">Portraits, printed in a minute.</h1>
         <p className="t-sub mx-auto mt-6 max-w-2xl text-steel">
           Studio-lit portraits at your wedding, party or launch. Backdrops and prints made by hand, for your event.
@@ -604,7 +604,7 @@ function Footer() {
         <div className="grid gap-10 border-b border-hairline pb-10 md:grid-cols-12">
           <div className="md:col-span-5">
             <a href="#top" className="inline-block text-ink" aria-label={`${SITE_NAME}, back to top`}>
-              <Logo className="h-16" />
+              <Logo className="h-14" />
             </a>
             <p className="mt-6 max-w-xs">Finished by hand. Travel on request.</p>
           </div>

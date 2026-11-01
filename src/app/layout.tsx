@@ -1,13 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Jost, Newsreader } from "next/font/google";
+import { Newsreader } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { SITE_URL } from "@/lib/site";
 
-// Jost for text and interface, Newsreader for headings (the studio's logo pairing)
-const jost = Jost({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-jost",
+// Glacial Indifference (SIL Open Font License) for text and interface, Newsreader for headings
+const glacial = localFont({
+  src: [
+    { path: "../fonts/GlacialIndifference-Regular.otf", weight: "400", style: "normal" },
+    { path: "../fonts/GlacialIndifference-Bold.otf", weight: "700", style: "normal" },
+  ],
+  variable: "--font-glacial",
   display: "swap",
 });
 
@@ -52,7 +55,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${jost.variable} ${newsreader.variable}`}>
+    <html lang="en" className={`${glacial.variable} ${newsreader.variable}`}>
       <body>{children}</body>
     </html>
   );

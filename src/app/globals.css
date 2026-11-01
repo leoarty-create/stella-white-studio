@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-jost), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-sans: var(--font-glacial), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-serif: var(--font-newsreader), Georgia, "Times New Roman", serif;
 }
 
@@ -64,7 +64,7 @@ body {
 }
 
 @layer components {
-/* Type scale: Newsreader for headings, Jost for everything else */
+/* Type scale: Newsreader for headings, Glacial Indifference for everything else */
 .t-display,
 .t-h2,
 .t-h3 {
