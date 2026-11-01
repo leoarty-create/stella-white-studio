@@ -69,6 +69,9 @@ body {
 .t-h2,
 .t-h3 {
   font-family: var(--font-serif);
+  font-weight: 500;
+}
+.t-h3 {
   font-weight: 600;
 }
 .t-display {
