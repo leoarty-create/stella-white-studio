@@ -1,24 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Newsreader } from "next/font/google";
-import localFont from "next/font/local";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import "./globals.css";
 import { SITE_URL } from "@/lib/site";
 
-// Glacial Indifference (SIL Open Font License) for text and interface, Newsreader for headings
-const glacial = localFont({
-  src: [
-    { path: "../fonts/GlacialIndifference-Regular.otf", weight: "400", style: "normal" },
-    { path: "../fonts/GlacialIndifference-Bold.otf", weight: "700", style: "normal" },
-  ],
-  variable: "--font-glacial",
+// Cormorant Garamond for headings, Manrope for text and interface (both SIL Open Font License)
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
   display: "swap",
 });
 
-const newsreader = Newsreader({
+const manrope = Manrope({
   subsets: ["latin"],
-  style: ["normal", "italic"],
-  axes: ["opsz"],
-  variable: "--font-newsreader",
+  weight: ["400", "500", "600"],
+  variable: "--font-manrope",
   display: "swap",
 });
 
@@ -55,7 +52,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${glacial.variable} ${newsreader.variable}`}>
+    <html lang="en" className={`${manrope.variable} ${cormorant.variable}`}>
       <body>{children}</body>
     </html>
   );
