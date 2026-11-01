@@ -67,8 +67,8 @@ function Hero() {
   return (
     <section id="top" className="bg-paper text-ink">
       <Container className="pb-12 pt-28 text-center lg:pb-16 lg:pt-32">
-        <Logo className="mx-auto h-24 sm:h-28 lg:h-32" />
-        <h1 className="t-display mx-auto mt-10 max-w-[16ch] lg:mt-12">Portraits, printed in a minute.</h1>
+        <p className="text-xs font-medium uppercase tracking-[0.3em] text-steel">Event portraits</p>
+        <h1 className="t-display mx-auto mt-8 max-w-[16ch] lg:mt-10">Portraits, printed in a minute.</h1>
         <p className="t-sub mx-auto mt-6 max-w-2xl text-steel">
           Studio-lit portraits at your wedding, party or launch. Backdrops and prints made by hand, for your event.
         </p>
