@@ -7,7 +7,7 @@ import Motion from "@/components/motion";
 import Words from "@/components/words";
 import InstagramEmbeds from "@/components/instagram-embeds";
 import Lightbox from "@/components/lightbox";
-import { Lockup } from "@/components/wordmark";
+import { Logo } from "@/components/wordmark";
 import { ChevronRight, FeatureIcon, InstagramIcon, PlusIcon } from "@/components/icons";
 import {
   BIO_LINE,
@@ -67,7 +67,7 @@ function Hero() {
   return (
     <section id="top" className="bg-paper text-ink">
       <Container className="pb-12 pt-28 text-center lg:pb-16 lg:pt-32">
-        <Lockup className="[--wm:clamp(2.5rem,5vw,3.5rem)]" />
+        <Logo className="mx-auto h-28 sm:h-32 lg:h-36" />
         <h1 className="t-display mx-auto mt-10 max-w-[16ch] lg:mt-12">Portraits, printed in a minute.</h1>
         <p className="t-sub mx-auto mt-6 max-w-2xl text-steel">
           Studio-lit portraits at your wedding, party or launch. Backdrops and prints made by hand, for your event.
@@ -131,7 +131,7 @@ function Statement() {
       <Container>
         <p
           data-scrollwords
-          className="max-w-5xl text-[clamp(2rem,5.2vw,4.25rem)] font-semibold leading-[1.08] tracking-[-0.04em]"
+          className="max-w-5xl text-[clamp(2rem,5.2vw,4.25rem)] font-serif font-normal leading-[1.1] tracking-[-0.02em]"
         >
           <Words text={STATEMENT} />
         </p>
@@ -320,7 +320,7 @@ function HowItWorks() {
           {STEPS.map((s, i) => (
             <li key={s.number} data-reveal style={idx(i)} className="flex">
               <div className="lift flex min-h-[320px] w-full flex-col rounded-[28px] bg-coal p-8 lg:min-h-[400px] lg:p-10">
-                <span aria-hidden="true" className="text-[96px] font-semibold leading-none tracking-[-0.06em] lg:text-[128px]">
+                <span aria-hidden="true" className="font-serif text-[96px] font-normal leading-none tracking-[-0.03em] lg:text-[128px]">
                   {s.number}
                 </span>
                 <h3 className="t-h3 mt-auto pt-12">{s.title}</h3>
@@ -349,7 +349,7 @@ function Included() {
                 <FeatureIcon name={item.icon} className="h-8 w-8 text-ink" />
                 <div className="mt-8 lg:mt-12">
                   <h3
-                    className={`font-semibold leading-[1.1] tracking-[-0.03em] ${
+                    className={`font-serif font-normal leading-[1.1] tracking-[-0.015em] ${
                       item.wide ? "text-[28px] lg:text-[32px]" : "text-[24px]"
                     }`}
                   >
@@ -393,7 +393,7 @@ function Occasions() {
                   className="h-full w-full object-cover grayscale transition-transform duration-[1600ms] ease-out group-hover:scale-[1.05]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                <p className="absolute inset-x-6 bottom-6 text-[24px] font-semibold leading-tight tracking-[-0.03em]">
+                <p className="absolute inset-x-6 bottom-6 font-serif text-[28px] font-normal leading-tight tracking-[-0.015em]">
                   {o.label}
                 </p>
                 <span className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-ink/50 opacity-0 backdrop-blur transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
@@ -552,7 +552,7 @@ function Faq() {
           <div className="border-t border-hairline">
             {FAQS.map((f) => (
               <details key={f.q} className="group border-b border-hairline">
-                <summary className="flex cursor-pointer items-center justify-between gap-6 py-6 text-[22px] font-semibold leading-snug tracking-[-0.025em] transition-colors hover:text-steel lg:text-[24px]">
+                <summary className="flex cursor-pointer items-center justify-between gap-6 py-6 font-serif text-[24px] font-normal leading-snug tracking-[-0.01em] transition-colors hover:text-steel lg:text-[24px]">
                   <span>{f.q}</span>
                   <PlusIcon className="h-6 w-6 shrink-0 transition-transform duration-500 ease-out group-open:rotate-45" />
                 </summary>
@@ -604,12 +604,12 @@ function Footer() {
         <div className="grid gap-10 border-b border-hairline pb-10 md:grid-cols-12">
           <div className="md:col-span-5">
             <a href="#top" className="inline-block text-ink" aria-label={`${SITE_NAME}, back to top`}>
-              <Lockup className="lockup-left [--wm:2.25rem]" />
+              <Logo className="h-16" />
             </a>
             <p className="mt-6 max-w-xs">Finished by hand. Travel on request.</p>
           </div>
           <nav aria-label="Footer" className="md:col-span-3">
-            <p className="font-semibold text-ink">Explore</p>
+            <p className="font-medium text-ink">Explore</p>
             <ul className="mt-3 space-y-2">
               {links.map((l) => (
                 <li key={l.href}>
@@ -621,7 +621,7 @@ function Footer() {
             </ul>
           </nav>
           <div className="md:col-span-4">
-            <p className="font-semibold text-ink">Get in touch</p>
+            <p className="font-medium text-ink">Get in touch</p>
             <p className="mt-3">The best way to reach us is Instagram.</p>
             <a
               href={INSTAGRAM_URL}

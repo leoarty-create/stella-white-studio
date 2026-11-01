@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { INSTAGRAM_HANDLE, INSTAGRAM_URL, SITE_NAME } from "@/lib/site";
 import { CloseIcon, InstagramIcon, MenuIcon } from "./icons";
-import { Wordmark } from "./wordmark";
+import { Logo } from "./wordmark";
 import Cta from "./cta";
 
 const LINKS = [
@@ -38,13 +38,10 @@ export default function Header() {
           <a
             href="#top"
             onClick={() => setOpen(false)}
-            className="flex flex-col items-center leading-none"
+            className="flex items-center leading-none"
             aria-label={`${SITE_NAME}, back to top`}
           >
-            <Wordmark className="text-[24px]" />
-            <span className="mt-1 pl-[0.5em] text-[8px] font-medium uppercase tracking-[0.5em]" aria-hidden="true">
-              Studio
-            </span>
+            <Logo className="h-12" />
           </a>
 
           <nav aria-label="Primary" className="hidden items-center gap-8 xl:flex">
@@ -103,7 +100,7 @@ export default function Header() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="border-b border-hairline py-4 text-[32px] font-semibold leading-tight tracking-[-0.035em] transition-colors hover:text-steel"
+              className="border-b border-hairline py-4 font-serif text-[34px] font-normal leading-tight tracking-[-0.015em] transition-colors hover:text-steel"
             >
               {l.label}
             </a>

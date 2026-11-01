@@ -1,28 +1,28 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Jost, Newsreader } from "next/font/google";
 import "./globals.css";
 import { SITE_URL } from "@/lib/site";
 
-const inter = Inter({
+// Jost for text and interface, Newsreader for headings (the studio's logo pairing)
+const jost = Jost({
   subsets: ["latin"],
-  axes: ["opsz"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600"],
+  variable: "--font-jost",
   display: "swap",
 });
 
-// Used only for the italic "stella" in the wordmark, to match the studio's logo
-const playfair = Playfair_Display({
+const newsreader = Newsreader({
   subsets: ["latin"],
-  style: ["italic"],
-  weight: ["500", "600"],
-  variable: "--font-playfair",
+  style: ["normal", "italic"],
+  axes: ["opsz"],
+  variable: "--font-newsreader",
   display: "swap",
 });
 
 const title = "Stella White Studio | Event portraits, finished by hand";
 const description =
   "Studio-lit portraits at weddings, parties and launches. Backdrops and prints made by hand for your event. Travel on request.";
-const logo = `${SITE_URL}stella-white-logo.jpg`;
+const logo = `${SITE_URL}og-image.png`;
 
 export const metadata: Metadata = {
   title,
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     description,
     type: "website",
     siteName: "Stella White Studio",
-    images: [{ url: logo, width: 500, height: 500, alt: "Stella White Studio, event portraits" }],
+    images: [{ url: logo, width: 1200, height: 630, alt: "Stella White Studio, event portraits" }],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title,
     description,
     images: [logo],
@@ -52,7 +52,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${jost.variable} ${newsreader.variable}`}>
       <body>{children}</body>
     </html>
   );

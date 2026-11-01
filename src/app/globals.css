@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-  --font-wm: var(--font-playfair), "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-jost), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-serif: var(--font-newsreader), Georgia, "Times New Roman", serif;
 }
 
 /* Palette lifted from the studio's logo: warm off-white #EEEDE9 and near-black #161616. No colour accent. */
@@ -29,7 +29,7 @@ body {
   font-family: var(--font-sans);
   font-size: 1.0625rem;
   line-height: 1.47;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
   font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -64,72 +64,45 @@ body {
 }
 
 @layer components {
-/* Type scale: big, tight, few words */
+/* Type scale: Newsreader for headings, Jost for everything else */
+.t-display,
+.t-h2,
+.t-h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
 .t-display {
-  font-weight: 600;
-  letter-spacing: -0.048em;
-  line-height: 0.96;
-  font-size: clamp(3rem, 9.6vw, 7.25rem);
+  letter-spacing: -0.025em;
+  line-height: 1;
+  font-size: clamp(3rem, 8.4vw, 6.5rem);
 }
 .t-h2 {
-  font-weight: 600;
-  letter-spacing: -0.042em;
-  line-height: 1.04;
-  font-size: clamp(2.5rem, 6.4vw, 5rem);
+  letter-spacing: -0.02em;
+  line-height: 1.06;
+  font-size: clamp(2.5rem, 6vw, 4.75rem);
 }
 .t-h3 {
-  font-weight: 600;
-  letter-spacing: -0.033em;
-  line-height: 1.08;
+  letter-spacing: -0.015em;
+  line-height: 1.12;
   font-size: clamp(1.75rem, 3.4vw, 2.5rem);
 }
 .t-sub {
   font-weight: 400;
-  letter-spacing: -0.015em;
-  line-height: 1.3;
-  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  letter-spacing: 0;
+  line-height: 1.35;
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
 }
 .t-eyebrow {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.875rem;
-  letter-spacing: -0.005em;
+  letter-spacing: 0.01em;
   line-height: 1.3;
 }
 
-/* The studio wordmark: italic serif "stella" run into heavy sans "white", then spaced caps (from the logo) */
-.lockup {
-  font-size: var(--wm, 3rem);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1;
-  text-align: center;
-}
-.lockup-studio {
-  font-family: var(--font-sans);
-  font-size: max(0.75rem, 0.2em);
-  font-weight: 500;
-  letter-spacing: 0.62em;
-  padding-left: 0.62em;
-  margin-top: 1.5em;
-  text-transform: uppercase;
-}
-.lockup-left {
-  align-items: flex-start;
-  text-align: left;
-}
-.lockup-left .lockup-studio,
-.lockup-left .lockup-meta {
-  padding-left: 0;
-}
-.lockup-meta {
-  font-family: var(--font-sans);
-  font-size: max(0.6875rem, 0.13em);
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  padding-left: 0.2em;
-  margin-top: 2.4em;
-  text-transform: uppercase;
+/* The studio logo (SVG): size it with height */
+.logo-img {
+  display: block;
+  width: auto;
 }
 
 /* Full-bleed scroller gutters: the first card lines up with the page container */
