@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-sans: var(--font-source-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-serif: var(--font-newsreader), Georgia, "Times New Roman", serif;
 }
 
@@ -64,12 +64,12 @@ body {
 }
 
 @layer components {
-/* Type scale: Newsreader for headings, Manrope for everything else */
+/* Type scale: Newsreader for headings, Source Sans 3 for everything else */
 .t-display,
 .t-h2,
 .t-h3 {
   font-family: var(--font-serif);
-  font-weight: 400;
+  font-weight: 600;
 }
 .t-display {
   letter-spacing: -0.025em;

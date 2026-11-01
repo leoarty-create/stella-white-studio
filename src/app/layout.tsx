@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Newsreader, Manrope } from "next/font/google";
+import { Newsreader, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import { SITE_URL } from "@/lib/site";
 
-// Newsreader for headings, Manrope for text and interface (both SIL Open Font License)
+// Newsreader for headings, Source Sans 3 for text and interface (both SIL Open Font License)
 const newsreader = Newsreader({
   subsets: ["latin"],
   style: ["normal", "italic"],
@@ -12,10 +12,10 @@ const newsreader = Newsreader({
   display: "swap",
 });
 
-const manrope = Manrope({
+const sourceSans = Source_Sans_3({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
-  variable: "--font-manrope",
+  variable: "--font-source-sans",
   display: "swap",
 });
 
@@ -52,7 +52,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${newsreader.variable}`}>
+    <html lang="en" className={`${sourceSans.variable} ${newsreader.variable}`}>
       <body>{children}</body>
     </html>
   );
