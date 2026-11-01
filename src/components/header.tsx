@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { INSTAGRAM_HANDLE, INSTAGRAM_URL, SITE_NAME } from "@/lib/site";
 import { CloseIcon, InstagramIcon, MenuIcon } from "./icons";
-import { Mark } from "./wordmark";
+import { Logo } from "./wordmark";
 import Cta from "./cta";
 
 const LINKS = [
@@ -41,7 +41,7 @@ export default function Header() {
             className="flex items-center leading-none"
             aria-label={`${SITE_NAME}, back to top`}
           >
-            <Mark className="h-6" />
+            <Logo className="h-8" />
           </a>
 
           <nav aria-label="Primary" className="hidden items-center gap-8 xl:flex">
