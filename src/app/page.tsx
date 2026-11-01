@@ -80,7 +80,7 @@ function Hero() {
 
       {/* The studio's own picture. Capped at its native 1280 px so it is never stretched. */}
       <div className="px-3 pb-3 sm:px-4 sm:pb-4">
-        <div className="relative mx-auto aspect-[4/3] w-full max-w-[1280px] overflow-hidden rounded-[28px] bg-ink sm:aspect-[16/10] sm:rounded-[40px] lg:aspect-[16/9]">
+        <div className="relative mx-auto aspect-[4/3] w-full max-w-[1280px] overflow-hidden rounded-none bg-ink sm:aspect-[16/10] lg:aspect-[16/9]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={hero.src}
@@ -160,7 +160,7 @@ function Statement() {
               style={{ ...idx(i), flex: `${(b.photo.width / b.photo.height).toFixed(4)} 1 0%` }}
               className="min-w-0"
             >
-              <ViewLink photo={b.photo} index={b.index} className="group block overflow-hidden rounded-[28px] bg-black">
+              <ViewLink photo={b.photo} index={b.index} className="group block overflow-hidden rounded-none bg-black">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={b.photo.src}
@@ -233,7 +233,7 @@ function Experiences() {
         <SectionHead eyebrow="What we do" title="Pick one. Or all three." />
         <div className="mt-16 grid gap-4 lg:mt-24 lg:grid-cols-6 lg:gap-6">
           <div data-reveal className="lg:col-span-4">
-            <article className="lift on-dark group grid h-full overflow-hidden rounded-[28px] bg-ink text-paper lg:grid-cols-2">
+            <article className="lift on-dark group grid h-full overflow-hidden rounded-none bg-ink text-paper lg:grid-cols-2">
               <div className="order-2 flex flex-col justify-end p-8 lg:order-1 lg:min-h-[640px] lg:p-12">
                 <p className="t-eyebrow text-ash">{e.studio.label}</p>
                 <h3 className="t-h3 mt-3 max-w-sm">{e.studio.title}</h3>
@@ -259,7 +259,7 @@ function Experiences() {
           </div>
 
           <div data-reveal style={idx(1)} className="lg:col-span-2">
-            <article className="lift group flex h-full min-h-[560px] flex-col overflow-hidden rounded-[28px] bg-bone lg:min-h-[640px]">
+            <article className="lift group flex h-full min-h-[560px] flex-col overflow-hidden rounded-none bg-bone lg:min-h-[640px]">
               <div className="p-8 lg:p-10">
                 <p className="t-eyebrow text-steel">{e.atelier.label}</p>
                 <h3 className="t-h3 mt-3">{e.atelier.title}</h3>
@@ -283,7 +283,7 @@ function Experiences() {
           </div>
 
           <div data-reveal className="lg:col-span-6">
-            <article className="lift on-dark group grid overflow-hidden rounded-[28px] bg-coal text-paper lg:grid-cols-2">
+            <article className="lift on-dark group grid overflow-hidden rounded-none bg-coal text-paper lg:grid-cols-2">
               <div className="flex flex-col justify-center p-8 lg:p-16">
                 <p className="t-eyebrow text-ash">{e.keepsake.label}</p>
                 <h3 className="t-h3 mt-3 max-w-md">{e.keepsake.title}</h3>
@@ -319,7 +319,7 @@ function HowItWorks() {
         <ol className="mt-16 grid gap-4 lg:mt-24 lg:grid-cols-3 lg:gap-6">
           {STEPS.map((s, i) => (
             <li key={s.number} data-reveal style={idx(i)} className="flex">
-              <div className="lift flex min-h-[320px] w-full flex-col rounded-[28px] bg-coal p-8 lg:min-h-[400px] lg:p-10">
+              <div className="lift flex min-h-[320px] w-full flex-col rounded-none bg-coal p-8 lg:min-h-[400px] lg:p-10">
                 <span aria-hidden="true" className="font-serif text-[96px] font-normal leading-none tracking-[-0.03em] lg:text-[128px]">
                   {s.number}
                 </span>
@@ -345,7 +345,7 @@ function Included() {
         <ul className="mt-16 grid gap-4 sm:grid-cols-2 lg:mt-24 lg:grid-cols-4 lg:gap-6">
           {INCLUDED.map((item, i) => (
             <li key={item.title} data-reveal style={idx(i % 4)} className={item.wide ? "lg:col-span-2" : ""}>
-              <div className="lift flex h-full min-h-[176px] flex-col justify-between rounded-[28px] bg-bone p-8 sm:min-h-[240px] lg:min-h-[280px]">
+              <div className="lift flex h-full min-h-[176px] flex-col justify-between rounded-none bg-bone p-8 sm:min-h-[240px] lg:min-h-[280px]">
                 <FeatureIcon name={item.icon} className="h-8 w-8 text-ink" />
                 <div className="mt-8 lg:mt-12">
                   <h3
@@ -381,7 +381,7 @@ function Occasions() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${o.label}: see our work on Instagram`}
-                className="group relative block aspect-[3/4] overflow-hidden rounded-[28px] bg-coal"
+                className="group relative block aspect-[3/4] overflow-hidden rounded-none bg-coal"
               >
                 <Photo
                   id={o.photo.id}
@@ -525,7 +525,7 @@ function Reviews() {
       <Container>
         <div
           data-reveal
-          className="mx-auto max-w-3xl rounded-[28px] border border-dashed border-hairline px-8 py-16 text-center"
+          className="mx-auto max-w-3xl rounded-none border border-dashed border-hairline px-8 py-16 text-center"
         >
           <p className="t-eyebrow text-steel">Reviews</p>
           <p className="t-h3 mt-4">Kind words from our clients will appear here soon.</p>

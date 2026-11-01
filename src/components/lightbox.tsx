@@ -100,7 +100,7 @@ export default function Lightbox() {
           width={p.width}
           height={p.height}
           decoding="async"
-          className="lightbox-img h-auto max-h-full w-auto rounded-[12px] object-contain"
+          className="lightbox-img h-auto max-h-full w-auto  object-contain"
           style={{ maxWidth: `min(100%, ${p.width}px)` }}
         />
       </div>
