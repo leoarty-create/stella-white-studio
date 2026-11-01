@@ -1,14 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Newsreader, Manrope } from "next/font/google";
 import "./globals.css";
 import { SITE_URL } from "@/lib/site";
 
-// Cormorant Garamond for headings, Manrope for text and interface (both SIL Open Font License)
-const cormorant = Cormorant_Garamond({
+// Newsreader for headings, Manrope for text and interface (both SIL Open Font License)
+const newsreader = Newsreader({
   subsets: ["latin"],
-  weight: ["400", "500"],
   style: ["normal", "italic"],
-  variable: "--font-cormorant",
+  axes: ["opsz"],
+  variable: "--font-newsreader",
   display: "swap",
 });
 
@@ -52,7 +52,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${cormorant.variable}`}>
+    <html lang="en" className={`${manrope.variable} ${newsreader.variable}`}>
       <body>{children}</body>
     </html>
   );

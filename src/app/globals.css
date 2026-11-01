@@ -2,7 +2,7 @@
 
 @theme inline {
   --font-sans: var(--font-manrope), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-  --font-serif: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --font-serif: var(--font-newsreader), Georgia, "Times New Roman", serif;
 }
 
 /* Palette lifted from the studio's logo: warm off-white #EEEDE9 and near-black #161616. No colour accent. */
@@ -64,7 +64,7 @@ body {
 }
 
 @layer components {
-/* Type scale: Cormorant Garamond for headings, Manrope for everything else */
+/* Type scale: Newsreader for headings, Manrope for everything else */
 .t-display,
 .t-h2,
 .t-h3 {
@@ -72,19 +72,19 @@ body {
   font-weight: 400;
 }
 .t-display {
-  letter-spacing: -0.015em;
-  line-height: 0.98;
-  font-size: clamp(3.4rem, 9.2vw, 7.25rem);
+  letter-spacing: -0.025em;
+  line-height: 1;
+  font-size: clamp(3rem, 8.4vw, 6.5rem);
 }
 .t-h2 {
-  letter-spacing: -0.01em;
-  line-height: 1.04;
-  font-size: clamp(2.75rem, 6.6vw, 5.25rem);
+  letter-spacing: -0.02em;
+  line-height: 1.06;
+  font-size: clamp(2.5rem, 6vw, 4.75rem);
 }
 .t-h3 {
-  letter-spacing: -0.005em;
-  line-height: 1.1;
-  font-size: clamp(2rem, 3.8vw, 2.85rem);
+  letter-spacing: -0.015em;
+  line-height: 1.12;
+  font-size: clamp(1.75rem, 3.4vw, 2.5rem);
 }
 .t-sub {
   font-weight: 400;
