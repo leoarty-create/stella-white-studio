@@ -5,9 +5,9 @@
   --font-serif: var(--font-newsreader), Georgia, "Times New Roman", serif;
 }
 
-/* Palette lifted from the studio's logo: warm off-white #EEEDE9 and near-black #161616. No colour accent. */
+/* Palette lifted from the studio's logo: warm off-white #EEEDE9 and near-black #1B1B1B. No colour accent. */
 @theme {
-  --color-ink: #161616;
+  --color-ink: #1b1b1b;
   --color-coal: #212121;
   --color-paper: #eeede9;
   --color-bone: #f7f6f3;
