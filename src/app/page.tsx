@@ -7,7 +7,6 @@ import Motion from "@/components/motion";
 import Words from "@/components/words";
 import InstagramEmbeds from "@/components/instagram-embeds";
 import Lightbox from "@/components/lightbox";
-import { Logo } from "@/components/wordmark";
 import { ChevronRight, FeatureIcon, InstagramIcon, PlusIcon } from "@/components/icons";
 import {
   BIO_LINE,
@@ -25,6 +24,7 @@ import {
   OCCASIONS,
   OCCASION_NOTE,
   PHOTOS,
+  BASE_PATH,
   SITE_NAME,
   STATEMENT,
   STEPS,
@@ -601,14 +601,15 @@ function Footer() {
   return (
     <footer className="border-t border-hairline bg-paper text-[12px] leading-5 text-steel">
       <Container className="py-12">
-        <div className="grid gap-10 border-b border-hairline pb-10 md:grid-cols-12">
-          <div className="md:col-span-5">
-            <a href="#top" className="inline-block text-ink" aria-label={`${SITE_NAME}, back to top`}>
-              <Logo className="h-14" />
-            </a>
-            <p className="mt-6 max-w-xs">Finished by hand. Travel on request.</p>
-          </div>
-          <nav aria-label="Footer" className="md:col-span-3">
+        <div className="flex flex-col items-center border-b border-hairline pb-10 text-center">
+          <a href="#top" className="block w-full max-w-[520px]" aria-label={`${SITE_NAME}, back to top`}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={`${BASE_PATH}/stella-white-footer.svg?v=sws3`} alt={SITE_NAME} className="h-auto w-full" />
+          </a>
+          <p className="mt-2">Finished by hand. Travel on request.</p>
+        </div>
+        <div className="grid gap-10 border-b border-hairline py-10 md:grid-cols-12">
+          <nav aria-label="Footer" className="md:col-span-5">
             <p className="font-medium text-ink">Explore</p>
             <ul className="mt-3 space-y-2">
               {links.map((l) => (
@@ -620,7 +621,7 @@ function Footer() {
               ))}
             </ul>
           </nav>
-          <div className="md:col-span-4">
+          <div className="md:col-span-4 md:col-start-7">
             <p className="font-medium text-ink">Get in touch</p>
             <p className="mt-3">The best way to reach us is Instagram.</p>
             <a

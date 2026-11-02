@@ -22,7 +22,7 @@ const sourceSans = Source_Sans_3({
 const title = "Stella White Studio | Event portraits, finished by hand";
 const description =
   "Studio-lit portraits at weddings, parties and launches. Backdrops and prints made by hand for your event. Travel on request.";
-const logo = `${SITE_URL}og-image.png?v=sws2`;
+const logo = `${SITE_URL}og-image.png?v=sws3`;
 
 export const metadata: Metadata = {
   title,

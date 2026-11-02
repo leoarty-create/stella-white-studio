@@ -10,7 +10,7 @@ export const BIO_LINE = "Event portraits · Est. 2024";
 export const SITE_URL = "https://leoarty-create.github.io/stella-white-studio/";
 /** Plain <img> tags need the base path added by hand (next.config.mjs sets this). */
 export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-export const LOGO_SRC = `${BASE_PATH}/stella-white-avatar.png?v=sws2`;
+export const LOGO_SRC = `${BASE_PATH}/stella-white-avatar.png?v=sws3`;
 
 /**
  * The studio's own photographs (from Guy, 2 Oct 2026; originals in projects/jane-website/photos-from-guy-20261002/).

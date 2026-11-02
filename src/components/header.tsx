@@ -41,7 +41,7 @@ export default function Header() {
             className="flex items-center leading-none"
             aria-label={`${SITE_NAME}, back to top`}
           >
-            <Logo className="h-8" />
+            <Logo className="h-[34px]" />
           </a>
 
           <nav aria-label="Primary" className="hidden items-center gap-8 xl:flex">
