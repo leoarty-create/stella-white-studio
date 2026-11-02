@@ -604,7 +604,7 @@ function Footer() {
         <div className="flex flex-col items-center border-b border-hairline pb-10 text-center">
           <a href="#top" className="block w-full max-w-[520px]" aria-label={`${SITE_NAME}, back to top`}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={`${BASE_PATH}/stella-white-footer.svg?v=sws3`} alt={SITE_NAME} className="h-auto w-full" />
+            <img src={`${BASE_PATH}/stella-white-footer.png?v=sws4`} alt={SITE_NAME} className="h-auto w-full" />
           </a>
           <p className="mt-2">Finished by hand. Travel on request.</p>
         </div>
